@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080711" />
+  <meta name="description" content="RADAR IA — sua central de inteligência artificial." />
+  <title>RADAR IA — Sua central de inteligência artificial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="RADAR IA início">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>RADAR <b>IA</b><small>SUA CENTRAL DE INTELIGÊNCIA</small></span>
+      </a>
+      <div class="side-label">MENU PRINCIPAL</div>
+      <nav class="nav">
+        <button class="nav-link active" data-page="inicio"><i>⌂</i> Visão geral</button>
+        <button class="nav-link" data-page="ferramentas"><i>⌕</i> Explorar IAs</button>
+        <button class="nav-link" data-page="prompts"><i>✧</i> Biblioteca de prompts</button>
+        <button class="nav-link" data-page="conteudo"><i>▤</i> Criador de conteúdo</button>
+        <button class="nav-link" data-page="tutoriais"><i>▷</i> Tutoriais</button>
+        <button class="nav-link" data-page="novidades"><i>◈</i> Novidades</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-icon">✦</div>
+          <strong>Seu radar está ligado.</strong>
+          <p>Explore recursos e descubra novas possibilidades com IA.</p>
+          <span class="status-pill"><span></span> AMBIENTE DEMONSTRAÇÃO</span>
+        </div>
+        <button class="profile-button"><span class="avatar">R</span><span><b>Visitante</b><small>Prévia do produto</small></span><span class="dots">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb">RADAR IA <span>/</span> <b id="crumb">Visão geral</b></div>
+        <div class="top-actions">
+          <label class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Buscar ferramentas, prompts..." /><kbd>⌘ K</kbd></label>
+          <button class="icon-button" title="Notificações">♧</button>
+          <div class="avatar small">R</div>
+        </div>
+      </header>
+
+      <section class="page active" id="page-inicio">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="pulse"></span> CENTRAL DE INTELIGÊNCIA ARTIFICIAL</div>
+            <h1>Descubra o que a <span>IA</span> pode fazer.</h1>
+            <p class="lead">Ferramentas, prompts e conhecimento para transformar suas ideias em resultados.</p>
+          </div>
+          <div class="date-chip">✦ RADAR ATIVO <span>•</span> 2026</div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-grid"></div><div class="hero-content">
+            <span class="tag">SEU PRÓXIMO NÍVEL COMEÇA AQUI</span>
+            <h2>Menos procura.<br><em>Mais possibilidades.</em></h2>
+            <p>Encontre ferramentas de inteligência artificial, aprenda a utilizá-las e tenha novas ideias em um só lugar.</p>
+            <button class="primary-button" data-go="ferramentas">Explorar ferramentas <span>→</span></button>
+          </div>
+          <div class="radar-art"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="radar-sweep"></div><div class="radar-center">✧</div><b class="radar-label">AI / RADAR</b></div>
+        </div>
+        <div class="section-heading"><div><h2>Explore o RADAR</h2><p>Atalhos para encontrar o que você precisa.</p></div><span class="subtle-link">CONTEÚDO DE DEMONSTRAÇÃO</span></div>
+        <div class="quick-grid">
+          <button class="quick-card" data-go="ferramentas"><span class="quick-icon purple">⌕</span><b>Ferramentas de IA</b><small>Descubra recursos por categoria</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-go="prompts"><span class="quick-icon blue">✧</span><b>Prompts prontos</b><small>Inspire-se e economize tempo</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-go="conteudo"><span class="quick-icon pink">▤</span><b>Criar conteúdo</b><small>Organize ideias e roteiros</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-go="tutoriais"><span class="quick-icon cyan">▷</span><b>Aprender IA</b><small>Tutoriais para todos os níveis</small><span class="card-arrow">↗</span></button>
+        </div>
+        <div class="section-heading"><div><h2>Em destaque</h2><p>Alguns recursos para começar sua exploração.</p></div><button class="text-button" data-go="ferramentas">Ver catálogo completo →</button></div>
+        <div class="tool-grid" id="featuredTools"></div>
+      </section>
+
+      <section class="page" id="page-ferramentas">
+        <div class="page-heading"><div class="eyebrow">CATÁLOGO INTELIGENTE</div><h1>Explore ferramentas de <span>IA</span></h1><p>Descubra soluções para criar, aprender, trabalhar e automatizar tarefas.</p></div>
+        <div class="filter-row"><input class="field search-field" id="toolSearch" placeholder="Pesquisar ferramenta..." /><select class="field" id="categoryFilter"><option value="Todas">Todas as categorias</option><option>Texto</option><option>Imagem</option><option>Vídeo</option><option>Áudio</option><option>Produtividade</option><option>Programação</option></select></div>
+        <div class="tool-grid" id="allTools"></div>
+      </section>
+
+      <section class="page" id="page-prompts">
+        <div class="page-heading"><div class="eyebrow">BIBLIOTECA DE PROMPTS</div><h1>Ideias prontas para <span>usar</span></h1><p>Adapte os comandos ao seu objetivo e experimente em sua ferramenta de IA favorita.</p></div>
+        <div class="filter-row"><input class="field search-field" id="promptSearch" placeholder="Pesquisar prompts..." /><select class="field" id="promptCategory"><option value="Todas">Todas as categorias</option><option>Marketing</option><option>Conteúdo</option><option>Produtividade</option><option>Estudos</option></select></div>
+        <div class="prompt-list" id="promptList"></div>
+      </section>
+
+      <section class="page" id="page-conteudo">
+        <div class="page-heading"><div class="eyebrow">ESTÚDIO DE IDEIAS</div><h1>Seu próximo conteúdo começa <span>aqui</span></h1><p>Monte um ponto de partida para roteiros, legendas e ideias. Esta versão gera modelos locais, sem conexão com uma API de IA.</p></div>
+        <div class="generator-layout">
+          <form class="panel generator-form" id="generatorForm">
+            <h3>Configure seu conteúdo</h3>
+            <label>Formato<select class="field" id="format"><option>Roteiro para TikTok</option><option>Roteiro para YouTube Shorts</option><option>Legenda para Instagram</option><option>Ideias de vídeos</option><option>Descrição de produto</option></select></label>
+            <label>Assunto<input class="field" id="subject" required placeholder="Ex.: 5 formas de usar IA nos estudos" /></label>
+            <label>Objetivo<select class="field" id="goal"><option>Ensinar algo útil</option><option>Gerar engajamento</option><option>Apresentar uma solução</option><option>Divulgar um produto</option></select></label>
+            <button class="primary-button" type="submit">Montar meu modelo <span>✧</span></button>
+          </form>
+          <div class="panel output-panel"><div class="output-top"><h3>Seu modelo</h3><span class="tag">RASCUNHO</span></div><div id="generatedOutput" class="generated-output empty-state">Preencha os campos ao lado para gerar seu primeiro modelo.</div><button class="secondary-button" id="copyOutput" disabled>Copiar texto</button></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-tutoriais">
+        <div class="page-heading"><div class="eyebrow">CENTRAL DE APRENDIZADO</div><h1>Aprenda no seu <span>ritmo</span></h1><p>Conteúdos introdutórios para começar a explorar a inteligência artificial.</p></div>
+        <div class="tutorial-grid" id="tutorialGrid"></div>
+      </section>
+
+      <section class="page" id="page-novidades">
+        <div class="page-heading"><div class="eyebrow">RADAR DE ATUALIZAÇÕES</div><h1>Fique por dentro das <span>novidades</span></h1><p>Um espaço para acompanhar atualizações e novos conteúdos publicados.</p></div>
+        <div class="notice"><b>Importante:</b> as publicações abaixo são exemplos de estrutura. As novidades reais deverão ser pesquisadas, verificadas e cadastradas pelo administrador.</div>
+        <div class="news-list" id="newsList"></div>
+      </section>
+
+      <footer>© 2026 RADAR IA · Sua central de inteligência artificial <span>Versão inicial demonstrativa</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
